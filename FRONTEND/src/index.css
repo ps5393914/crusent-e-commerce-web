@@ -1,0 +1,273 @@
+:root {
+  --primary: #2874f0;
+  --secondary: #f2a900;
+  --bg-color: #f1f3f6;
+  --text-dark: #212121;
+  --text-light: #878787;
+  --white: #ffffff;
+  --danger: #ff6161;
+  --success: #388e3c;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 2px 0 0 2px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 500;
+}
+
+.nav-links .login-btn {
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 5px 25px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* Product Card */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 4px;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  box-shadow: 0 3px 16px 0 rgba(0,0,0,0.11);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+/* Auth Forms */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.auth-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondary);
+  color: var(--text-dark);
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.btn-primary:hover {
+  background-color: #d69500;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Comparison Section */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.comparison-table th, .comparison-table td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.comparison-table th {
+  background-color: var(--bg-color);
+}
+
+.buy-now-btn {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buy-now-btn:hover {
+  background-color: #1a5ac6;
+}
+
+.meesho-btn {
+  background-color: #f43397;
+}
+.meesho-btn:hover {
+  background-color: #d81b7b;
+}
+
+.amazon-btn {
+  background-color: #ff9900;
+}
+.amazon-btn:hover {
+  background-color: #e68a00;
+}
+
+.winner {
+  background-color: #e8f5e9;
+  font-weight: bold;
+}
+
+.flipkart-btn { background-color: #2874f0; }
+.flipkart-btn:hover { background-color: #1a5ac6; }

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone 15 (128 GB) - Black",
+    "image": "/images/smartphone.jpg",
+    "description": "Dynamic Island bubbles up alerts and Live Activities. 48MP Main camera with 2x Telephoto.",
+    "category": "Smartphones",
+    "amazon": {
+      "price": 71999,
+      "rating": 4.6,
+      "reviewCount": 3450,
+      "productUrl": "https://www.amazon.in/dp/B0CHX1W1XY"
+    },
+    "meesho": {
+      "price": 70500,
+      "rating": 4.5,
+      "reviewCount": 1200,
+      "productUrl": "https://www.meesho.com/s/p/4v9k2p"
+    },
+    "flipkart": {
+      "price": 71499,
+      "rating": 4.6,
+      "reviewCount": 2800,
+      "productUrl": "https://www.flipkart.com/apple-iphone-15-black-128-gb/p/itm3234701b0863a"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Sony WH-1000XM5 Wireless Headphones",
+    "image": "/images/headphones.jpg",
+    "description": "Industry Leading Noise Canceling Wireless Headphones with 30 Hours Battery Life.",
+    "category": "Headphones",
+    "amazon": {
+      "price": 29990,
+      "rating": 4.5,
+      "reviewCount": 12500,
+      "productUrl": "https://www.amazon.in/dp/B0B5LVS732"
+    },
+    "meesho": {
+      "price": 28500,
+      "rating": 4.4,
+      "reviewCount": 8900,
+      "productUrl": "https://www.meesho.com/s/p/3b8x1q"
+    },
+    "flipkart": {
+      "price": 29490,
+      "rating": 4.5,
+      "reviewCount": 10500,
+      "productUrl": "https://www.flipkart.com/sony-wh-1000xm5-wireless-noise-cancellation-ai-reduction-bluetooth/p/itmdec52bcb83eb9"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Apple Watch Series 9",
+    "image": "/images/smartwatch.jpg",
+    "description": "Smartwatch with Midnight Aluminum Case and Midnight Sport Band.",
+    "category": "Smart Watches",
+    "amazon": {
+      "price": 41900,
+      "rating": 4.7,
+      "reviewCount": 6800,
+      "productUrl": "https://www.amazon.in/dp/B0CHX5R34W"
+    },
+    "meesho": {
+      "price": 42500,
+      "rating": 4.5,
+      "reviewCount": 3200,
+      "productUrl": "https://www.meesho.com/s/p/1m4c9z"
+    },
+    "flipkart": {
+      "price": 41499,
+      "rating": 4.6,
+      "reviewCount": 5100,
+      "productUrl": "https://www.flipkart.com/apple-watch-series-9-gps-45mm-aluminium-case-sport-band-s-m/p/itm73c98221ecacf"
+    }
+  },
+  {
+    "id": 4,
+    "name": "HP Pavilion 14 Laptop",
+    "image": "/images/laptop.jpg",
+    "description": "12th Gen Intel Core i5, 16GB RAM, 512GB SSD, 14-inch Micro-Edge Display.",
+    "category": "Laptops",
+    "amazon": {
+      "price": 62990,
+      "rating": 4.2,
+      "reviewCount": 1800,
+      "productUrl": "https://www.amazon.in/dp/B0B4N77Y34"
+    },
+    "meesho": {
+      "price": 61500,
+      "rating": 4.1,
+      "reviewCount": 950,
+      "productUrl": "https://www.meesho.com/s/p/5n2y8r"
+    },
+    "flipkart": {
+      "price": 62490,
+      "rating": 4.3,
+      "reviewCount": 1650,
+      "productUrl": "https://www.flipkart.com/hp-pavilion-amd-ryzen-7-octa-core-5825u-16-gb-512-gb-ssd-windows-11-home-14-ec1008au-thin-light-laptop/p/itme62d35e1c6515"
+    }
+  },
+  {
+    "id": 5,
+    "name": "JBL Charge 5 Bluetooth Speaker",
+    "image": "/images/speaker.jpg",
+    "description": "Portable Waterproof Speaker with Built-in Powerbank.",
+    "category": "Bluetooth Speakers",
+    "amazon": {
+      "price": 14999,
+      "rating": 4.6,
+      "reviewCount": 11500,
+      "productUrl": "https://www.amazon.in/dp/B08WYRWLSS"
+    },
+    "meesho": {
+      "price": 13999,
+      "rating": 4.5,
+      "reviewCount": 6400,
+      "productUrl": "https://www.meesho.com/s/p/8k3t5v"
+    },
+    "flipkart": {
+      "price": 14499,
+      "rating": 4.6,
+      "reviewCount": 9800,
+      "productUrl": "https://www.flipkart.com/jbl-charge-5-20hr-playtime-ip67-rating-7500-mah-powerbank-portable-40-w-bluetooth-speaker/p/itm1b1e1d8be9501"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Puma Men's Sneakers",
+    "image": "/images/shoes.jpg",
+    "description": "Comfortable daily wear sports sneakers with breathable mesh.",
+    "category": "Shoes",
+    "amazon": {
+      "price": 2499,
+      "rating": 4,
+      "reviewCount": 5500,
+      "productUrl": "https://www.amazon.in/dp/B08HPH8Y5T"
+    },
+    "meesho": {
+      "price": 1999,
+      "rating": 3.9,
+      "reviewCount": 3200,
+      "productUrl": "https://www.meesho.com/s/p/9h6w2l"
+    },
+    "flipkart": {
+      "price": 2299,
+      "rating": 4.1,
+      "reviewCount": 4800,
+      "productUrl": "https://www.flipkart.com/puma-terranova-sneakers-men/p/itmdd1bc86f1678b"
+    }
+  },
+  {
+    "id": 7,
+    "name": "American Tourister Backpack",
+    "image": "/images/backpack.jpg",
+    "description": "32L Casual Backpack with Dedicated Laptop Sleeve.",
+    "category": "Backpacks",
+    "amazon": {
+      "price": 1299,
+      "rating": 4.3,
+      "reviewCount": 22000,
+      "productUrl": "https://www.amazon.in/dp/B07CJCGM1M"
+    },
+    "meesho": {
+      "price": 1199,
+      "rating": 4.1,
+      "reviewCount": 15000,
+      "productUrl": "https://www.meesho.com/s/p/2j8b4f"
+    },
+    "flipkart": {
+      "price": 1249,
+      "rating": 4.2,
+      "reviewCount": 18500,
+      "productUrl": "https://www.flipkart.com/american-tourister-valex-27-5-l-laptop-backpack/p/itm2672f35baa855"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Logitech G502 Gaming Mouse",
+    "image": "/images/mouse.jpg",
+    "description": "High Performance Gaming Mouse with 25K Sensor and Tunable Weights.",
+    "category": "Gaming Accessories",
+    "amazon": {
+      "price": 4499,
+      "rating": 4.5,
+      "reviewCount": 3100,
+      "productUrl": "https://www.amazon.in/dp/B07L4BM851"
+    },
+    "meesho": {
+      "price": 4599,
+      "rating": 4.2,
+      "reviewCount": 850,
+      "productUrl": "https://www.meesho.com/s/p/6g4m9d"
+    },
+    "flipkart": {
+      "price": 4399,
+      "rating": 4.4,
+      "reviewCount": 2500,
+      "productUrl": "https://www.flipkart.com/logitech-g502-hero-25k-sensor-adj-dpi-upto-25600-rgb-11-programmable-buttons-wired-ambidextrous-optical-gaming-mouse/p/itma269dc20e3570"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Philips Air Fryer HD9200",
+    "image": "/images/appliance.jpg",
+    "description": "4.1L Capacity, 1400W Rapid Air Technology for healthy frying.",
+    "category": "Home Appliances",
+    "amazon": {
+      "price": 6499,
+      "rating": 4.4,
+      "reviewCount": 18000,
+      "productUrl": "https://www.amazon.in/dp/B097RJ867P"
+    },
+    "meesho": {
+      "price": 6299,
+      "rating": 4.3,
+      "reviewCount": 11000,
+      "productUrl": "https://www.meesho.com/s/p/7r5n3c"
+    },
+    "flipkart": {
+      "price": 6599,
+      "rating": 4.5,
+      "reviewCount": 15000,
+      "productUrl": "https://www.flipkart.com/philips-hd9252-90-air-fryer/p/itm413e15d99af88"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Fastrack Men's Watch",
+    "image": "/images/accessory.jpg",
+    "description": "Analog Black Dial Men's Watch with Leather Strap.",
+    "category": "Fashion Accessories",
+    "amazon": {
+      "price": 1599,
+      "rating": 4.1,
+      "reviewCount": 9200,
+      "productUrl": "https://www.amazon.in/dp/B0711FRBZR"
+    },
+    "meesho": {
+      "price": 1450,
+      "rating": 3.9,
+      "reviewCount": 5600,
+      "productUrl": "https://www.meesho.com/s/p/4d2s1v"
+    },
+    "flipkart": {
+      "price": 1550,
+      "rating": 4,
+      "reviewCount": 7800,
+      "productUrl": "https://www.flipkart.com/fastrack-bare-basics-analog-watch-men/p/itmf3zhhpha3mruh"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Sony PlayStation 5 Console",
+    "image": "/images/console.jpg",
+    "description": "Experience lightning-fast loading with an ultra-high speed SSD and breathtaking immersion.",
+    "category": "Gaming Consoles",
+    "amazon": {
+      "price": 49990,
+      "rating": 4.8,
+      "reviewCount": 15000,
+      "productUrl": "https://www.amazon.in/dp/B08FV5GC28"
+    },
+    "meesho": {
+      "price": 48500,
+      "rating": 4.6,
+      "reviewCount": 2300,
+      "productUrl": "https://www.meesho.com/s/p/1y8r2q"
+    },
+    "flipkart": {
+      "price": 49490,
+      "rating": 4.7,
+      "reviewCount": 12500,
+      "productUrl": "https://www.flipkart.com/sony-playstation-5-console/p/itma0201bdea62fa"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Samsung 43 inch 4K Ultra HD Smart LED TV",
+    "image": "/images/tv.jpg",
+    "description": "Crystal 4K UHD resolution with HDR and PurColor technology for stunning visuals.",
+    "category": "Televisions",
+    "amazon": {
+      "price": 28990,
+      "rating": 4.3,
+      "reviewCount": 21000,
+      "productUrl": "https://www.amazon.in/dp/B0B15C8RRM"
+    },
+    "meesho": {
+      "price": 27990,
+      "rating": 4.2,
+      "reviewCount": 4200,
+      "productUrl": "https://www.meesho.com/s/p/5a9q4l"
+    },
+    "flipkart": {
+      "price": 28490,
+      "rating": 4.4,
+      "reviewCount": 18500,
+      "productUrl": "https://www.flipkart.com/samsung-crystal-4k-43-inch-ultra-hd-4k-smart-tizen-tv/p/itm534720e7e171b"
+    }
+  }
+]

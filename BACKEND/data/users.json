@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1791387322254",
+      "email": "ps5393914@gmail.com",
+      "password": "$2b$10$6h4Jt3z/gdiuFGa5CAFw3e9pYsRnTKamJECv4QD94KEn1ulj53NUC",
+      "createdAt": "2026-10-07T15:35:22.254Z"
+    },
+    {
+      "id": "1791473938147",
+      "email": "vishnu@gmail.com",
+      "password": "$2b$10$spYnNt9wCDqM2gXQE.v0k.UjKJ2TfoSmcJDk9ILb8YqyGtFkWv3au",
+      "createdAt": "2026-10-08T15:38:58.147Z"
+    }
+  ]
+}
