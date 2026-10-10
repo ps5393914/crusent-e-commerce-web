@@ -133,8 +133,8 @@ const AdminDashboard = () => {
           <tbody>
             {dashboardData.users && dashboardData.users.map(u => (
               <tr key={u.id}>
-                <td>{u.email.split('@')[0]}</td>
-                <td>{u.email}</td>
+                <td>{u.role === 'admin' ? 'CRUSENT Administrator' : u.email.split('@')[0]}</td>
+                <td>{u.role === 'admin' ? 'Administrator' : u.email}</td>
                 <td>{u.role === 'admin' ? 'Admin' : 'Customer'}</td>
                 <td>
                   <span style={{ 

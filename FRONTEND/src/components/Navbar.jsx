@@ -40,12 +40,15 @@ const Navbar = () => {
         <div className="nav-links">
           {user ? (
             <>
-              {user.role === 'admin' && (
-                <Link to="/admin" style={{ fontWeight: 'bold', color: '#f2a900' }}>Admin Dashboard</Link>
+              {user.role === 'admin' ? (
+                <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f2a900' }}>
+                  <FiUser /> CRUSENT Administrator
+                </Link>
+              ) : (
+                <Link to="/profile" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <FiUser /> {user.email.split('@')[0]}
+                </Link>
               )}
-              <Link to="/profile" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-                <FiUser /> {user.email.split('@')[0]}
-              </Link>
               <button onClick={handleLogout} className="login-btn">Logout</button>
             </>
           ) : (

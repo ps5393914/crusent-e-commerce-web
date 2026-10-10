@@ -14,7 +14,7 @@ const Profile = () => {
       <div style={{ background: '#fff', padding: '30px', borderRadius: '4px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
         <h2 style={{ marginBottom: '20px', color: '#2874f0' }}>My Profile</h2>
         <div style={{ marginBottom: '20px' }}>
-          <strong>Email:</strong> {user.email}
+          <strong>User:</strong> {user.role === 'admin' ? 'CRUSENT Administrator' : user.email}
         </div>
         <p style={{ color: '#878787', marginBottom: '20px' }}>
           Welcome to CRUSENT! This is a simple profile page. In a full production application, you would see your past orders, wishlist, and account settings here.
