@@ -38,11 +38,21 @@ const Navbar = () => {
         </form>
 
         <div className="nav-links">
+          {!user || user.role !== 'seller' ? (
+             <Link to="/seller/login" style={{ color: '#ff9f00', fontWeight: 'bold', marginRight: '20px', textDecoration: 'none' }}>Seller Account</Link>
+          ) : (
+             <Link to="/seller/dashboard" style={{ color: '#ff9f00', fontWeight: 'bold', marginRight: '20px', textDecoration: 'none' }}>Seller Dashboard</Link>
+          )}
+
           {user ? (
             <>
               {user.role === 'admin' ? (
                 <Link to="/admin" style={{ display: 'flex', alignItems: 'center', gap: '5px', fontWeight: 'bold', color: '#f2a900' }}>
                   <FiUser /> CRUSENT Administrator
+                </Link>
+              ) : user.role === 'seller' ? (
+                <Link to="/seller/dashboard" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                  <FiUser /> {user.name || user.email.split('@')[0]}
                 </Link>
               ) : (
                 <Link to="/profile" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>

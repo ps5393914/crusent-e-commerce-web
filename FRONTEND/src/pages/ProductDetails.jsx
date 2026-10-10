@@ -55,8 +55,34 @@ const ProductDetails = () => {
           </div>
 
           <div style={{ marginTop: '30px' }}>
-            <h3 style={{ marginBottom: '15px', color: '#212121', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Price Comparison</h3>
-            <PriceComparison amazon={product.amazon} meesho={product.meesho} flipkart={product.flipkart} inline={false} />
+            {product.seller_info ? (
+              <div style={{ padding: '20px', background: '#f9f9f9', borderRadius: '8px', border: '1px solid #eee' }}>
+                <h3 style={{ marginBottom: '15px', color: '#212121' }}>Seller Information</h3>
+                <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#2874f0', marginBottom: '10px' }}>
+                  Price: ₹{product.price?.toLocaleString()}
+                </div>
+                <div style={{ fontSize: '16px', color: '#333', marginBottom: '5px' }}>
+                  <strong>Store:</strong> {product.seller_info.storeName}
+                </div>
+                <div style={{ fontSize: '14px', color: '#666' }}>
+                  <strong>Seller:</strong> {product.seller_info.sellerName}
+                </div>
+                {product.specifications && (
+                  <div style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid #ddd' }}>
+                    <strong>Specifications:</strong>
+                    <p style={{ marginTop: '5px', whiteSpace: 'pre-wrap' }}>{product.specifications}</p>
+                  </div>
+                )}
+                <button className="buy-now-btn" style={{ marginTop: '20px', background: '#ff9f00', border: 'none', padding: '12px 24px', color: '#fff', fontSize: '16px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>
+                  Add to Cart
+                </button>
+              </div>
+            ) : (
+              <>
+                <h3 style={{ marginBottom: '15px', color: '#212121', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>Price Comparison</h3>
+                <PriceComparison amazon={product.amazon} meesho={product.meesho} flipkart={product.flipkart} inline={false} />
+              </>
+            )}
           </div>
 
         </div>

@@ -29,6 +29,69 @@ const getDashboardData = async (req, res) => {
   }
 };
 
+const getSellers = async (req, res) => {
+  try {
+    const sellersRes = await pool.query('SELECT id, full_name, email, phone_number, store_name, business_address, status, created_at FROM sellers ORDER BY created_at DESC');
+    res.status(200).json(sellersRes.rows);
+  } catch (err) {
+    console.error('Error fetching sellers:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+const updateSellerStatus = async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+  
+  if (!['approved', 'rejected', 'suspended'].includes(status)) {
+    return res.status(400).json({ message: 'Invalid status' });
+  }
+
+  try {
+    await pool.query('UPDATE sellers SET status = $1 WHERE id = $2', [status, id]);
+    res.status(200).json({ message: `Seller account ${status} successfully` });
+  } catch (err) {
+    console.error('Error updating seller status:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+const getSellerProducts = async (req, res) => {
+  try {
+    const productsRes = await pool.query(`
+      SELECT sp.*, s.store_name 
+      FROM seller_products sp 
+      JOIN sellers s ON sp.seller_id = s.id 
+      ORDER BY sp.created_at DESC
+    `);
+    res.status(200).json(productsRes.rows);
+  } catch (err) {
+    console.error('Error fetching seller products:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+const updateProductStatus = async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body;
+  
+  if (!['approved', 'rejected'].includes(status)) {
+    return res.status(400).json({ message: 'Invalid status' });
+  }
+
+  try {
+    await pool.query('UPDATE seller_products SET status = $1 WHERE id = $2', [status, id]);
+    res.status(200).json({ message: `Product ${status} successfully` });
+  } catch (err) {
+    console.error('Error updating product status:', err);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
 module.exports = {
-  getDashboardData
+  getDashboardData,
+  getSellers,
+  updateSellerStatus,
+  getSellerProducts,
+  updateProductStatus
 };
