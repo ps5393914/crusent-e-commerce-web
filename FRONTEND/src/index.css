@@ -391,3 +391,80 @@ ul {
 
 .flipkart-btn { background-color: #2874f0; }
 .flipkart-btn:hover { background-color: #1a5ac6; }
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-bar {
+    margin: 0;
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .auth-container-modern {
+    flex-direction: column;
+  }
+
+  .auth-left {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .auth-illustration {
+    display: none;
+  }
+
+  .auth-right {
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Admin Dashboard Flex adjustments */
+  .dashboard-cards {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .dashboard-tables {
+    flex-direction: column !important;
+  }
+
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 20px;
+  }
+  
+  .nav-links {
+    gap: 10px;
+  }
+  
+  .nav-links a, .nav-links .login-btn {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+}
