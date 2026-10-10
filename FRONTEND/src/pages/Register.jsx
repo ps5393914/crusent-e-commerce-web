@@ -25,7 +25,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/register`, {
+      await axios.post(`${import.meta.env.VITE_API_URL || 'https://crusent-e-commerce-web-2.onrender.com'}/api/auth/register`, {
         email, password, confirmPassword
       });
       

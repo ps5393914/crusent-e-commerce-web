@@ -22,7 +22,7 @@ const Login = () => {
     setLoading(true);
     
     try {
-      const { data } = await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/login`, {
+      const { data } = await axios.post(`${import.meta.env.VITE_API_URL || 'https://crusent-e-commerce-web-2.onrender.com'}/api/auth/login`, {
         email, password
       }, { withCredentials: true });
       
