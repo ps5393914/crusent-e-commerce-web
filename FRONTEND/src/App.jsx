@@ -13,13 +13,15 @@ import SellerRegister from './pages/SellerRegister';
 import SellerDashboard from './pages/SellerDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
+import BottomNav from './components/BottomNav';
+
 function App() {
   const { user } = useContext(AuthContext);
 
   return (
     <Router>
       <Navbar />
-      <div className="container">
+      <main className="container main-content-wrapper">
         <Routes>
           <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
           <Route path="/register" element={user ? <Navigate to="/" /> : <Register />} />
@@ -31,7 +33,8 @@ function App() {
           <Route path="/seller/register" element={user && user.role === 'seller' ? <Navigate to="/seller/dashboard" /> : <SellerRegister />} />
           <Route path="/seller/dashboard" element={<ProtectedRoute><SellerDashboard /></ProtectedRoute>} />
         </Routes>
-      </div>
+      </main>
+      <BottomNav />
     </Router>
   );
 }
