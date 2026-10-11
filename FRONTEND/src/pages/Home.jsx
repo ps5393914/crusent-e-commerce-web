@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
+import { AuthContext } from '../context/AuthContext';
 
 const Home = () => {
+  const { user } = useContext(AuthContext);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -79,6 +81,68 @@ const Home = () => {
           ))}
         </div>
       )}
+
+      {/* Seller Account Section Under Products */}
+      <section className="seller-banner-section" aria-label="Seller Account Information">
+        <div className="seller-banner-wrapper">
+          <div className="seller-banner-header">
+            <span className="seller-banner-badge">CRUSENT SELLER HUB</span>
+            <h2 className="seller-banner-heading">Become a Seller on CRUSENT</h2>
+            <p className="seller-banner-subheading">
+              Sell your products to thousands of shoppers on Crusent. Start your online business with zero hassle, dedicated inventory tools, and transparent order tracking.
+            </p>
+          </div>
+
+          <div className="seller-perks-grid">
+            <div className="seller-perk-card">
+              <div className="seller-perk-icon-wrap">🚀</div>
+              <h3>Fast Setup & Onboarding</h3>
+              <p>Register your store in minutes, submit verification, and start listing inventory immediately.</p>
+            </div>
+
+            <div className="seller-perk-card">
+              <div className="seller-perk-icon-wrap">💰</div>
+              <h3>0% Setup Fee</h3>
+              <p>Maximize your revenue with transparent terms and direct access to active buyers.</p>
+            </div>
+
+            <div className="seller-perk-card">
+              <div className="seller-perk-icon-wrap">📊</div>
+              <h3>Seller Dashboard & Controls</h3>
+              <p>Live inventory management, instant price adjustments, and store catalog controls.</p>
+            </div>
+
+            <div className="seller-perk-card">
+              <div className="seller-perk-icon-wrap">🛡️</div>
+              <h3>Verified Store Badge</h3>
+              <p>Build buyer confidence with verified merchant credentials displayed directly on your products.</p>
+            </div>
+          </div>
+
+          <div className="seller-banner-footer">
+            <div className="seller-banner-cta-text">
+              <h4>Ready to start selling your products on CRUSENT?</h4>
+              <p>Join our growing seller network and grow your business today.</p>
+            </div>
+            <div className="seller-banner-buttons">
+              {user && user.role === 'seller' ? (
+                <Link to="/seller/dashboard" className="seller-btn-primary">
+                  Go to Seller Dashboard →
+                </Link>
+              ) : (
+                <>
+                  <Link to="/seller/register" className="seller-btn-primary">
+                    Create Seller Account
+                  </Link>
+                  <Link to="/seller/login" className="seller-btn-secondary">
+                    Seller Login
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

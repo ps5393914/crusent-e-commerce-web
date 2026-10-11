@@ -27,8 +27,8 @@ function App() {
           <Route path="/product/:id" element={<ProtectedRoute><ProductDetails /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
-          <Route path="/seller/login" element={user ? <Navigate to="/" /> : <SellerLogin />} />
-          <Route path="/seller/register" element={user ? <Navigate to="/" /> : <SellerRegister />} />
+          <Route path="/seller/login" element={user && user.role === 'seller' ? <Navigate to="/seller/dashboard" /> : <SellerLogin />} />
+          <Route path="/seller/register" element={user && user.role === 'seller' ? <Navigate to="/seller/dashboard" /> : <SellerRegister />} />
           <Route path="/seller/dashboard" element={<ProtectedRoute><SellerDashboard /></ProtectedRoute>} />
         </Routes>
       </div>

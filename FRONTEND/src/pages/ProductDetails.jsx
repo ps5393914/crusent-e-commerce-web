@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import PriceComparison from '../components/PriceComparison';
+import { AuthContext } from '../context/AuthContext';
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const { user } = useContext(AuthContext);
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -16,6 +18,7 @@ const ProductDetails = () => {
         setProduct(data);
         setLoading(false);
       } catch (err) {
+        console.error('Error fetching product details:', err);
         setError('Failed to fetch product details.');
         setLoading(false);
       }
@@ -83,6 +86,33 @@ const ProductDetails = () => {
                 <PriceComparison amazon={product.amazon} meesho={product.meesho} flipkart={product.flipkart} inline={false} />
               </>
             )}
+
+            {/* Seller Account Option Under Product Details */}
+            <div className="product-seller-cta-card">
+              <div className="product-seller-cta-badge">CRUSENT SELLER HUB</div>
+              <div className="product-seller-cta-content">
+                <div>
+                  <h4>Have this product or similar items to sell?</h4>
+                  <p>Open a CRUSENT Seller Account to list your products, reach active buyers, and grow your sales.</p>
+                </div>
+                <div className="product-seller-cta-actions">
+                  {user && user.role === 'seller' ? (
+                    <Link to="/seller/dashboard" className="product-seller-btn">
+                      Seller Dashboard
+                    </Link>
+                  ) : (
+                    <>
+                      <Link to="/seller/register" className="product-seller-btn">
+                        Open Seller Account
+                      </Link>
+                      <Link to="/seller/login" className="product-seller-btn-outline">
+                        Seller Login
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

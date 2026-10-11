@@ -20,6 +20,7 @@ const AdminDashboard = () => {
     }
 
     const fetchDashboard = async () => {
+      try {
         const baseURL = import.meta.env.VITE_API_URL || 'https://crusent-e-commerce-web-2.onrender.com';
         const config = { withCredentials: true };
         
